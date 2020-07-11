@@ -6,15 +6,65 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+}
 
-/* PRE LOADER */
 
-/* 
+/* ================ TYPOGRAPHY ====================*/
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  color: #353535;
+  font-size: 2em;
+}
+
+p {
+  color: #757575;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+
+/* ================   GENERAL  ====================*/
+
+/* For smooth scrolling */
+html {
+  -webkit-font-smoothing: antialiased; 
+}
+
+/* Edit scrollbar on the right side */
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #202020;
+}
+
+/* ================ PRE LOADER ====================*/
+
+/* ==============================================================================
 
 Note ini hanya sebuah Loader yang dibuat dengan menggunakan CSS tanpa Javascript,
 sehingga lama waktu loadernya tidak sesuai dengan lama waktu loading page.
 
-*/
+=================================================================================*/
 
 section.spinner-container {
   position: absolute;
@@ -97,10 +147,7 @@ section.spinner-container {
 
 /* HEADER */
 
-
 .test {
-  position: absolute;
-  background-color: black;
   width: 100%;
-  height: 100vh;
+  height: 300vh;
 }
