@@ -496,14 +496,75 @@ nav {
 
 
 
+/* CONTACT */
+.contact-form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
+.contact-container {
+  margin: 0 auto;
+  text-align: center;
+}
 
+.contact-container h2 {
+  margin-bottom: 50px;
+}
 
+.contact-name {
+  border: none;
+  box-shadow: 0px 2px #b6b6b6;
+  height: 40px;
+  width: 350px;
+}
+
+.contact-email {
+  border: none;
+  box-shadow: 0px 2px #b6b6b6;
+  height: 40px;
+  width: 350px;
+}
+
+.contact-button {
+  width: 300px;
+}
+
+.contact-message {
+  padding-top: 15px;
+  border: none;
+  box-shadow: 0px 2px #b6b6b6;
+  height: 250px;
+  width: 1000px;
+}
 
 
 
 /* FOOTER */
-
 footer {
-  height: 200vh;
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.footer-container {
+  max-width: 100%;
+  margin-left: 150px;
+  margin-right: 250px;
+}
+
+.footer-copy{
+  float: left;
+}
+
+.footer-sosmed{
+  float: right;
+}
+
+.footer-ul {
+  display: flex;
+}
+
+.footer-ul li{
+  padding-left: 20px;
+  padding-right: 20px;
 }
