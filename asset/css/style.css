@@ -426,20 +426,22 @@ nav {
   width: 100%;
   background-color: #fff;
   padding: 80px 0;
+  
 }
 
 .features-wrapper {
-  width: 89%;
+  max-width: 90%;
   margin: 0 auto;
+  text-align: justify;
 }
 
 .features-wrapper h3 {
-  padding-top: 25px;
+  padding-top: 20px;
+  font-weight: normal;
 }
 
 .features-wrapper h4 {
   padding-bottom: 5px;
-  margin-top: 55px;
   margin-bottom: 20px;
   display: inline-block;
   border-bottom: 3px solid rgb(96, 214, 96);
@@ -455,7 +457,7 @@ nav {
 
 .feature {
   position: relative;
-  margin: 40px 0;
+  margin: 60px 0 20px 0;
 }
 
 .feature img {
@@ -478,6 +480,43 @@ nav {
 
 .support-img {
   right: 10%;
+}
+
+@media(max-width: 1000px) {
+  .text {
+    width: 65%;
+  }
+
+  .features-wrapper {
+    width: 100%;
+  }
+
+  .feature img {
+    height: 80%;
+    top: 3%;
+    right: 0%;
+  }
+  
+  .mobile {
+    margin-left: 0%;
+  }
+
+  .mobile-img {
+    position: absolute;
+    left: 75%;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .text {
+    width: 100%;
+  }
+
+  .feature img{
+    display: none;
+  }
+
 }
 
 
