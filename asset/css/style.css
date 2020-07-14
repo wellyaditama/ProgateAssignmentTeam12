@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, textarea {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   background-color: #f9f9f9;
