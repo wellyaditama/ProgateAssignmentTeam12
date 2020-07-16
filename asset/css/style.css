@@ -562,6 +562,7 @@ nav {
   width: 1000px;
 }
 
+
 /* ABOUT */
 .about {
   padding: 100px 0px;
@@ -580,7 +581,6 @@ nav {
 
 .team {
   width: 90%;
-  
   margin: 0 auto;
   display: flex;
 }
@@ -601,6 +601,16 @@ nav {
   margin-top: 10px; 
 }
 
+@media(max-width: 768px) {
+  .team {
+    flex-wrap: wrap;
+  }
+
+  .team2 {
+    flex-wrap: wrap-reverse;
+  }
+}
+
 /* TESTIMONIAL */
 .testimonial {
   background: white;
@@ -609,8 +619,6 @@ nav {
 }
 
 .testimonial-container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -658,6 +666,17 @@ nav {
   display: inline-block;
   vertical-align: middle;
   padding: 0px auto;
+}
+
+@media(max-width: 990px) {
+  .testimonial-container {
+    flex-wrap: wrap;
+  }
+
+  .testimonial-left {
+  width: 100%;
+  height: auto;
+  }
 }
 
 /* PRICING */
