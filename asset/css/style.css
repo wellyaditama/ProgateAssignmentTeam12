@@ -607,7 +607,8 @@ nav {
   }
 
   .team2 {
-    flex-wrap: wrap-reverse;
+    display: flex; 
+    flex-direction: column-reverse;
   }
 }
 
