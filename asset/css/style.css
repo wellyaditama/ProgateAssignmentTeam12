@@ -780,7 +780,7 @@ nav {
 .testimonial-item h4 {
   color: #d9d9d9;
   display: inline-block;
-  vertical-align: middle;
+  line-height: 60px;
   padding: 0px auto;
 }
 
