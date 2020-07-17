@@ -881,10 +881,11 @@ nav {
 
 @media (max-width: 1100px) {
   .pricing {
-    padding: 10px 30px;
+    padding: 10px;
   }
   .price {
     flex-wrap: wrap;
+    padding: 10px;
   }
   .price li {
     width: 50%;
