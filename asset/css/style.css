@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-body, textarea {
+body, textarea::placeholder {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   background-color: #f9f9f9;
@@ -57,7 +57,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #202020;
+  background: #20202091;
 }
 
 a {
@@ -66,7 +66,7 @@ a {
 }
 
 a,
-input, button,
+input, button, textarea,
 .form-control {
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -445,6 +445,8 @@ nav {
   margin-bottom: 20px;
   display: inline-block;
   border-bottom: 3px solid rgb(96, 214, 96);
+  font-size: 1.7em;
+  font-weight: 400;
 }
 
 .features-wrapper p {
@@ -522,18 +524,28 @@ nav {
 
 
 /* CONTACT */
-.contact-form {
+/* .contact-form {
   margin-top: 100px;
   margin-bottom: 100px;
+  width: 100%;
 }
 
 .contact-container {
   margin: 0 auto;
   text-align: center;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.contact-container > form {
+  width: 100%;
+  padding: 0 10%;
 }
 
 .contact-container h2 {
   margin-bottom: 50px;
+  font-size: 3em;
+  color: #353535;
 }
 
 .contact-name {
@@ -541,6 +553,8 @@ nav {
   box-shadow: 0px 2px #b6b6b6;
   height: 40px;
   width: 350px;
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 .contact-email {
@@ -548,6 +562,7 @@ nav {
   box-shadow: 0px 2px #b6b6b6;
   height: 40px;
   width: 350px;
+  margin-right: 10px;;
 }
 
 .contact-button {
@@ -559,7 +574,103 @@ nav {
   border: none;
   box-shadow: 0px 2px #b6b6b6;
   height: 250px;
-  width: 1000px;
+  width: 100%;
+  padding: 10px;
+} */
+
+.contact-form {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact-container > h2 {
+  font-size: 2.5em;
+  margin-bottom: 70px;
+}
+
+.contact-container > form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-container > form > input,
+.contact-container > form > button {
+  flex-grow: 1;
+  flex-basis: 30%;
+  padding: 0 10px;
+  margin: 0 8px;
+  outline: none;
+  border: none;
+  margin-bottom: 50px;
+}
+
+
+.contact-container > form > textarea {
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  margin: 0 8px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.contact-container > form > textarea::placeholder {
+  font: 400 13.3333px Arial;
+}
+
+.contact-container > form > input,
+.contact-container > form > button,
+.contact-container > form > textarea {
+  border-bottom: solid 3px #20202017;
+}
+
+.contact-container > form > input:focus,
+.contact-container > form > button:focus,
+.contact-container > form > textarea:focus {
+  border-bottom: solid 3px #202020;
+}
+
+.contact-button {
+  background: #202020;
+  line-height: 50px;
+  font-size: .8em;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+  background: #29ca8e;
+}
+
+@media(max-width: 1000px) {
+  .contact-container > form > input {
+    flex-basis: 45%;
+    height: 50px;
+  }
+
+  .contact-container > form > button {
+    flex-basis: 100%;
+  }
+}
+
+@media(max-width: 768px) {
+  .contact-container > form > input {
+    flex-basis: 100%;
+    height: 50px;
+  }
+
+  .contact-container > form > textarea {
+    height: 150px;
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -572,8 +683,8 @@ nav {
   margin: 15px 0px;
 }
 
-.about-container h1{
-  margin-top: : 20px; 
+.about-container h1 {
+  margin-top: 20px; 
   margin-bottom: 10px;
   padding-bottom: 40px;
   text-align: center;
@@ -602,6 +713,10 @@ nav {
 }
 
 @media(max-width: 768px) {
+  .about-container h1 {
+    font-size: 2.3em;
+  }
+
   .team {
     flex-wrap: wrap;
   }
@@ -681,6 +796,7 @@ nav {
 }
 
 /* PRICING */
+
 .pricing {
   padding: 60px 20px;
 }
@@ -743,6 +859,7 @@ nav {
 .price {
   display: flex;
   flex-direction: row;
+  padding: 60px;
 }
 .price li {
   flex: auto;
@@ -758,6 +875,12 @@ nav {
   }
   .price li {
     width: 50%;
+  }
+  .price li span {
+    text-align: center;
+  }
+  .price-title {
+    text-align: center !important; 
   }
 }
 
@@ -782,27 +905,105 @@ nav {
   .register {
     width: 100%;
   }
+
+  .price li span {
+    text-align: center;
+  }
+
+  .price-title {
+    text-align: center !important;
+  }
 }
 
 /* FOOTER */
 footer {
   position: relative;
   width: 100%;
-  height: 50px;
+  height: auto;
+  overflow: hidden;
+  background-color: #202020;
 }
 
 .footer-container {
-  max-width: 100%;
-  margin-left: 150px;
-  margin-right: 250px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 30px 0;
+}
+
+.footer-content > ul {
+  flex-grow: 1;
+  flex-basis: 25%;
+  padding: 5px 10px;
+}
+
+.footer-content > ul {
+  margin-left: 10%;
+}
+
+.moto {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.moto > h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.moto > p {
+  font-size: 1em;
+}
+
+.footer-content > ul > li > a {
+  color: #b6b6b6;
+  display: inline-block;
+  font-weight: thin;
+  font-size: .8em;
+  margin-bottom: 10px;
+}
+
+.footer-content > ul > li > a:hover {
+  color: #29ca8e;
+}
+
+.footer-content > ul > li > a.bold {
+  font-weight: bold;
+  font-size: .9em;
+  color: white;
+  margin-bottom: 15px;
+  cursor: default;
+}
+
+.bold:hover {
+  color: rgb(255, 255, 255);
 }
 
 .footer-copy{
   float: left;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.footer-copy > p {
+  line-height: 50px;
+  color: white;
 }
 
 .footer-sosmed{
   float: right;
+  font-size: 1.3em;
 }
 
 .footer-ul {
@@ -810,6 +1011,46 @@ footer {
 }
 
 .footer-ul li{
+  line-height: 50px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.icon-color {
+  color: rgb(250, 250, 250);
+}
+
+@media(max-width: 768px) {
+  footer {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-content > .moto {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-content > ul {
+    flex-basis: 20%;
+  }
+
+  .footer-copy {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .footer-ul {
+    float: none;
+    text-align: left;
+  }
+  
 }
