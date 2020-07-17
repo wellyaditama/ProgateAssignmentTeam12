@@ -872,6 +872,7 @@ nav {
   }
   .price {
     flex-wrap: wrap;
+    padding: 10px;
   }
   .price li {
     width: 50%;
