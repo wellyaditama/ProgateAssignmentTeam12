@@ -714,7 +714,7 @@ nav {
 
 @media(max-width: 768px) {
   .about-container h1 {
-    font-size: 2.3em;
+    font-size: 2em;
   }
 
   .team {
@@ -812,8 +812,9 @@ nav {
   }
 
   .testimonial-right h3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
+}
 
 @media(max-width: 400px) {
   .testimonial-right h1 {
@@ -837,18 +838,17 @@ nav {
   font-weight: normal;
 }
 
-.price-list {
-  border-top:  rgb(235, 235, 235) 1px solid;
-  border-bottom:  rgb(235, 235, 235) 1px solid;
-  height: 250px;
-}
+
 .price {
   list-style: none;
   margin: 0px;
   padding: 60px 0px;
   text-align: justify;
-  display: flex;
-  flex-direction: row;
+}
+.price-list {
+  border-top:  rgb(235, 235, 235) 1px solid;
+  border-bottom:  rgb(235, 235, 235) 1px solid;
+  height: 250px;
 }
 .price li {
   color: white;
@@ -857,9 +857,7 @@ nav {
   background-color: #fff;
   margin: 2px;
   border: none;
-  padding: 15px 30px;
-  flex: auto;
-  width: 25%;
+  padding: 15px 40px;
 }
 .price li:hover {
   box-shadow: 0 0 10px #8f8f8f;
@@ -889,13 +887,22 @@ nav {
 }
 
 
+.price {
+  display: flex;
+  flex-direction: row;
+  padding: 60px;
+}
+.price li {
+  flex: auto;
+  width: 25%;
+}
+
 @media (max-width: 1100px) {
   .pricing {
-    padding: 30px; 10px;
+    padding: 10px 30px;
   }
   .price {
     flex-wrap: wrap;
-    padding: 20px 10px;
   }
   .price li {
     width: 50%;
@@ -918,7 +925,10 @@ nav {
   }
   .price {
     flex-direction:column;
-    padding: 20px 10px;
+  }
+
+  ul.price {
+    padding: 8px;
   }
   
   .price li {
